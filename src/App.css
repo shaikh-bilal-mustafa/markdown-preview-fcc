@@ -1,0 +1,102 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Fira Code', monospace, sans-serif;
+  background-color: #0f172a; /* navy dark */
+  color: #e2e8f0; /* soft light text */
+}
+
+h1 {
+  text-align: center;
+  color: #22d3ee;
+  margin: 20px 0;
+  font-size: 2.5rem;
+}
+
+/* Container Flex */
+.boxes-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .boxes-container {
+    flex-direction: row;
+  }
+}
+
+/* Markdown Input */
+textarea#editor {
+  flex: 1;
+  min-height: 400px;
+  background-color: #1e293b; /* dark slate */
+  color: #f8fafc;
+  border: 1px solid #334155;
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 1rem;
+  resize: vertical;
+  font-family: monospace;
+}
+
+/* Markdown Output */
+#preview {
+  flex: 1;
+  min-height: 400px;
+  background-color: #1e1e2e; /* similar to VS Code dark */
+  border: 1px solid #334155;
+  border-radius: 10px;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* Markdown Styling */
+#preview h1, #preview h2, #preview h3 {
+  color: #38bdf8;
+}
+
+#preview a {
+  color: #7dd3fc;
+  text-decoration: underline;
+}
+
+#preview code {
+  background: #0f172a;
+  color: #facc15;
+  padding: 3px 6px;
+  border-radius: 5px;
+  font-size: 0.95rem;
+}
+
+#preview pre {
+  background: #0f172a;
+  padding: 15px;
+  border-radius: 10px;
+  overflow-x: auto;
+  color: #f1f5f9;
+}
+
+#preview ul, #preview ol {
+  padding-left: 20px;
+}
+
+#preview blockquote {
+  border-left: 4px solid #38bdf8;
+  padding-left: 10px;
+  color: #cbd5e1;
+  margin: 1em 0;
+}
+
+#preview img {
+  max-width: 100%;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+/* Task list checkboxes */
+#preview input[type="checkbox"] {
+  margin-right: 0.5em;
+  transform: scale(1.2);
+}
